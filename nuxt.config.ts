@@ -4,20 +4,11 @@ export default defineNuxtConfig({
 
   $development: {
     devtools: { enabled: true },
-    nitro: {
-      devStorage: {
-        data: {
-          driver: 'memory',
-        },
 
-      },
-    },
   },
 
-  $production: {
-    routeRules: {
-      '/': { swr: true, cache: { base: 'redis' } },
-    },
+  routeRules: {
+    '/': { swr: true },
   },
 
   app: {

@@ -7,7 +7,6 @@ export default defineEventHandler(async (event) => {
 
   const fetchTopStories = defineCachedFunction(() => $fetch<number[]>(joinURL(hackerNewsUrl, 'topstories.json')), {
     swr: true,
-    base: 'redis',
     getKey() {
       return 'top-stories'
     },
@@ -16,7 +15,6 @@ export default defineEventHandler(async (event) => {
   const fetchStory = defineCachedFunction((id: number) => $fetch<Item>(joinURL(hackerNewsUrl, `item/${id}.json`)), {
     swr: true,
     maxAge: 10 * 60,
-    base: 'redis',
     getKey(id) {
       return `item-${id}`
     },
@@ -25,7 +23,6 @@ export default defineEventHandler(async (event) => {
   const fetchUser = defineCachedFunction((id: string) => $fetch<User>(joinURL(hackerNewsUrl, `user/${id}.json`)), {
     swr: true,
     maxAge: 5 * 60,
-    base: 'redis',
     getKey(id) {
       return `user-${id}`
     },
