@@ -22,7 +22,7 @@ defineProps<Props>()
       />
       <div class="author__info">
         <span>Author: {{ name }}</span>
-        <span>Date: {{ new Date(timeStamp).toLocaleDateString() }}</span>
+        <span>Date: {{ new Date(timeStamp * 1000).toLocaleDateString('en-GB') }}</span>
       </div>
     </div>
 
