@@ -3,7 +3,7 @@ import type { UseFetchOptions } from '#app'
 /**
  * A composable function for fetching data from the Hacker News API using a custom fetch client.
  *
- * - Extends Nuxt's `useFetch` utility to integrate the `$hackerNewsApi` client
+ * - Extends Nuxt's `useFetch` utility to integrate the `$hackerNewsApi` client,
  *   which is configured in the Nuxt plugin for the HackerNews.ts.
  *
  * Parameters:
