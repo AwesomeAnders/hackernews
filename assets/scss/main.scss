@@ -1,0 +1,21 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: $font-body;
+    font-size: $font-size-sm;
+}
+
+.container {
+    max-width: 1200px;
+    margin: $space-0 auto;
+    padding: $space-3;
+  
+    @media screen and (max-width: $breakpoint-md) {
+      padding: $space-2;
+    }
+  }
