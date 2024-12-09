@@ -15,12 +15,8 @@ export default defineNuxtConfig({
   },
 
   $production: {
-    nitro: {
-      storage: {
-        redis: {
-          driver: 'redis',
-        },
-      },
+    routeRules: {
+      '/': { swr: true, cache: { base: 'redis' } },
     },
   },
 
@@ -41,10 +37,6 @@ export default defineNuxtConfig({
     public: {
       hackerNewsProxyUrl: '/api/hacker-news',
     },
-  },
-
-  routeRules: {
-    '/': { swr: true },
   },
 
   compatibilityDate: '2024-11-01',
