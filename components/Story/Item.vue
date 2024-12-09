@@ -19,8 +19,8 @@ defineProps<Props>()
   >
     <NuxtImg
       class="item__image"
-      height="160"
-      width="400"
+      :height="160"
+      :width="400"
       format="webp"
       :src="`article-3.jpg`"
       :alt="item.text || item.title"
