@@ -11,7 +11,6 @@ const { size = 'medium' } = defineProps<ButtonProps>()
   <button
     :disabled="disabled"
     :class="['button', `button--${size}`]"
-    class="button"
   >
     <slot />
   </button>
