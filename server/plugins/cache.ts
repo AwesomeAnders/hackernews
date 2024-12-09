@@ -6,8 +6,7 @@ export default defineNitroPlugin(() => {
   // Dynamically pass in credentials from runtime configuration
   const driver = redisDriver({
     base: 'redis',
-    host: useRuntimeConfig().redis.host,
-    port: useRuntimeConfig().redis.port,
+    url: useRuntimeConfig().redis.url,
   })
 
   // Mount driver
