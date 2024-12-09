@@ -1,10 +1,8 @@
 import redisDriver from 'unstorage/drivers/redis'
 
 export default defineNitroPlugin(() => {
-
-
   // Use nitro default storage driver for dev env
-  if(import.meta.dev){
+  if (import.meta.dev) {
     return
   }
 

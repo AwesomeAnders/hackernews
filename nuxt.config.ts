@@ -1,14 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/fonts'],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/fonts', '@nuxt/test-utils/module'],
 
   $development: {
     devtools: { enabled: true },
 
-  },
-
-  routeRules: {
-    '/': { swr: true },
   },
 
   app: {
@@ -27,6 +23,10 @@ export default defineNuxtConfig({
     public: {
       hackerNewsProxyUrl: '/api/hacker-news',
     },
+  },
+
+  routeRules: {
+    '/': { swr: true },
   },
 
   compatibilityDate: '2024-11-01',

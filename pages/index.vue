@@ -14,7 +14,7 @@ const { data, refresh, status } = await useHackerNewsFetch<Story[]>('/stories')
       <PageHero />
     </template>
 
-    <PageSection id="top-stories">
+    <PageSection>
       <VButton
         :disabled="status === 'pending'"
         @click="refresh"

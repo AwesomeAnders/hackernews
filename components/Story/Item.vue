@@ -44,7 +44,10 @@ defineProps<Props>()
         {{ item.url }}
       </NuxtLink>
 
-      <span v-if="item.score">
+      <span
+        v-if="item.score"
+        data-testid="story-score"
+      >
         Article score: {{ item.score }}
       </span>
     </div>
