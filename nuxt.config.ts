@@ -2,7 +2,27 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/fonts'],
 
-  devtools: { enabled: true },
+  $development: {
+    devtools: { enabled: true },
+    nitro: {
+      devStorage: {
+        data: {
+          driver: 'memory',
+        },
+
+      },
+    },
+  },
+
+  $production: {
+    nitro: {
+      storage: {
+        redis: {
+          driver: 'redis',
+        },
+      },
+    },
+  },
 
   app: {
     head: {
@@ -14,6 +34,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     hackerNewsUrl: 'https://hacker-news.firebaseio.com/v0',
+    redis: {
+      host: 'localhost',
+      port: 6379,
+    },
     public: {
       hackerNewsProxyUrl: '/api/hacker-news',
     },
