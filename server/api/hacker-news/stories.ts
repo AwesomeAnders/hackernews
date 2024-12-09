@@ -2,6 +2,20 @@ import { joinURL } from 'ufo'
 import type { Item } from '~/shared/Item'
 import type { User } from '~/shared/User'
 
+/**
+ * Server API route for fetching stories and author data to avoid
+ * multiple round-trips from the client to the Hacker News API.
+ *
+ * Makes use of Nitro's defineCachedFunction in order to cache individual responses
+ * from the Hacker News API and reduce the number of network requests
+ * to improve response times for repeated or concurrent requests.
+ *
+ * The route fetches the top stories, selects a random subset of 10 stories,
+ * retrieves detailed story data, and enriches it with author information by fetching
+ * user details. Responses are cached with swr (stale-while-revalidate) and explicit maxAge.
+ * to ensure data is always reasonsable up-to-date and revalidated in the background.
+ */
+
 export default defineEventHandler(async (event) => {
   const { hackerNewsUrl } = useRuntimeConfig(event)
 
