@@ -1,6 +1,7 @@
-# Nuxt Minimal Starter
+# Preview
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Publicly available at: https://hackernews-rose.vercel.app/
+(Initial load might be a little slow if server is inactive)
 
 ## Setup
 
