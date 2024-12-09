@@ -16,5 +16,5 @@ export default defineNitroPlugin(() => {
   })
 
   // Mount driver
-  storage.mount('redis', driver)
+  storage.mount('cache', driver)
 })
