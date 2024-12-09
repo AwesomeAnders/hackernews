@@ -25,10 +25,6 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: {
-    '/': { swr: true },
-  },
-
   compatibilityDate: '2024-11-01',
 
   vite: {
