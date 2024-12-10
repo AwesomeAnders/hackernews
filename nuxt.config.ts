@@ -7,6 +7,12 @@ export default defineNuxtConfig({
 
   },
 
+  $production: {
+    routeRules: {
+      '/': { isr: true },
+    },
+  },
+
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
