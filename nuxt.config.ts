@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   $production: {
     routeRules: {
-      '/': { isr: true },
+      '/': { swr: true },
     },
   },
 
