@@ -6,8 +6,8 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
   },
-
   app: {
+
     head: {
       htmlAttrs: { lang: 'en' },
     },
@@ -23,6 +23,10 @@ export default defineNuxtConfig({
     public: {
       hackerNewsProxyUrl: '/api/hacker-news',
     },
+  },
+
+  experimental: {
+    appManifest: false,
   },
 
   compatibilityDate: '2024-11-01',
