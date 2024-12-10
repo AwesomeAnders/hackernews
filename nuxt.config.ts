@@ -9,7 +9,12 @@ export default defineNuxtConfig({
 
   $production: {
     routeRules: {
-      '/': { swr: true },
+      '/': { cache: {
+        base: 'cache',
+        swr: true,
+        staleMaxAge: 10,
+        maxAge: 10,
+      } },
     },
   },
 
